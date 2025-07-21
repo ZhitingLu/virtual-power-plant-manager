@@ -9,7 +9,7 @@ jobs:
       - uses: pnpm/action-setup@v2
       - run: pnpm install
       - run: pnpm -r run build
-      - run: cd infra && pnpm cdk deploy
+      # - run: cd infra && pnpm cdk deploy
         # env:
         #   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         #   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
