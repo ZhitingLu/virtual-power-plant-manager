@@ -9,13 +9,11 @@
     "sourceMap": true,
     "rootDir": "src",
     "outDir": "dist",
+    "types": ["jest", "node"]
   },
   "include": [
-    "src/**/*"
+    "src/**/*",
+    "src/**/*.spec.ts" // ✅ ENSURE TEST FILES ARE INCLUDED FOR TYPE CHECKING
   ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "**/*.spec.ts"
-  ]
+  "exclude": ["node_modules", "dist", "**/*.spec.ts"]
 }
