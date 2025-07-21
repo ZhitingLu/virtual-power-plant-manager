@@ -1,0 +1,10 @@
+{
+    "app": "npx ts-node bin/infra.ts",
+    "context": {
+      "@aws-cdk/aws-lambda:recognizeLayerVersion": true,
+      "neonDatabase": {
+        "clusterId": "prod-neon-cluster",
+        "region": "us-east-1"
+      }
+    }
+  }

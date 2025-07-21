@@ -1,0 +1,36 @@
+{
+  "version": "45.0.0",
+  "files": {
+    "ba294e6f76efe809b8e56fec79051b4b5205e774e7c61e17a33e955630599b5a": {
+      "displayName": "DataProcessor/Code",
+      "source": {
+        "path": "asset.ba294e6f76efe809b8e56fec79051b4b5205e774e7c61e17a33e955630599b5a",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "607856384745-us-east-1-57ab9087": {
+          "bucketName": "cdk-hnb659fds-assets-607856384745-us-east-1",
+          "objectKey": "ba294e6f76efe809b8e56fec79051b4b5205e774e7c61e17a33e955630599b5a.zip",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::607856384745:role/cdk-hnb659fds-file-publishing-role-607856384745-us-east-1"
+        }
+      }
+    },
+    "59d844fca18a5b2d17ffa7d437d4d6ddfabd7081d2c97fa905ea67d5f7e47769": {
+      "displayName": "VirtualPowerPlantStack Template",
+      "source": {
+        "path": "VirtualPowerPlantStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "607856384745-us-east-1-9c8930ca": {
+          "bucketName": "cdk-hnb659fds-assets-607856384745-us-east-1",
+          "objectKey": "59d844fca18a5b2d17ffa7d437d4d6ddfabd7081d2c97fa905ea67d5f7e47769.json",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::607856384745:role/cdk-hnb659fds-file-publishing-role-607856384745-us-east-1"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

@@ -1,0 +1,26 @@
+{
+    "name": "infra",
+    "version": "1.0.0",
+    "scripts": {
+        "build": "tsc",
+        "clean": "rm -rf dist",
+        "synth": "cdk synth",
+        "deploy": "cdk deploy",
+        "diff": "cdk diff",
+        "watch": "tsc -w"
+    },
+    "dependencies": {
+        "@aws-cdk/aws-lambda-python-alpha": "2.206.0-alpha.0",
+        "@aws-cdk/aws-redshift-alpha": "2.206.0-alpha.0",
+        "aws-cdk": "2.124.0",
+        "aws-cdk-lib": "2.206.0",
+        "constructs": "10.3.0"
+    },
+    "devDependencies": {
+        "@types/node": "^20.19.9",
+        "glob": "^11.0.3",
+        "inflight": "^1.0.6",
+        "ts-node": "10.9.2",
+        "typescript": "^5.4.5"
+    }
+}
