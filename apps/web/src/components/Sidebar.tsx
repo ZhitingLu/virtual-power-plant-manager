@@ -62,11 +62,11 @@ const navigation: NavigationItem[] = [
   { name: "Reports", href: "#", icon: ChartPieIcon, current: false },
 ];
 
-const teams: PlantsGridProps[] = [
-  { id: 1, name: "Plant", href: "#", initial: "P", current: false },
-  { id: 2, name: "Readings", href: "#", initial: "R", current: false },
-  { id: 3, name: "Locations", href: "#", initial: "L", current: false },
-];
+// const teams: PlantsGridProps[] = [
+//   { id: 1, name: "Plant", href: "#", initial: "P", current: false },
+//   { id: 2, name: "Readings", href: "#", initial: "R", current: false },
+//   { id: 3, name: "Locations", href: "#", initial: "L", current: false },
+// ];
 
 const userNavigation: UserNavigationItem[] = [
   { name: "Your profile", href: "#" },
@@ -153,38 +153,7 @@ const Sidebar: FC<SidebarProps> = ({ children }) => {
                         ))}
                       </ul>
                     </li>
-                    <li>
-                      <div className="text-xs/6 font-semibold text-gray-400">
-                        Your teams
-                      </div>
-                      <ul role="list" className="-mx-2 mt-2 space-y-1">
-                        {teams.map((team) => (
-                          <li key={team.name}>
-                            <a
-                              href={team.href}
-                              className={classNames(
-                                team.current
-                                  ? "bg-gray-50 text-indigo-600"
-                                  : "text-gray-700 hover:bg-gray-50 hover:text-indigo-600",
-                                "group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold"
-                              )}
-                            >
-                              <span
-                                className={classNames(
-                                  team.current
-                                    ? "border-indigo-600 text-indigo-600"
-                                    : "border-gray-200 text-gray-400 group-hover:border-indigo-600 group-hover:text-indigo-600",
-                                  "flex size-6 shrink-0 items-center justify-center rounded-lg border bg-white text-[0.625rem] font-medium"
-                                )}
-                              >
-                                {team.initial}
-                              </span>
-                              <span className="truncate">{team.name}</span>
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    </li>
+                   
                     <li className="mt-auto">
                       <a
                         href="#"
@@ -245,38 +214,7 @@ const Sidebar: FC<SidebarProps> = ({ children }) => {
                     ))}
                   </ul>
                 </li>
-                <li>
-                  <div className="text-xs/6 font-semibold text-gray-400">
-                    Your teams
-                  </div>
-                  <ul role="list" className="-mx-2 mt-2 space-y-1">
-                    {teams.map((team) => (
-                      <li key={team.name}>
-                        <a
-                          href={team.href}
-                          className={classNames(
-                            team.current
-                              ? "bg-gray-50 text-indigo-600"
-                              : "text-gray-700 hover:bg-gray-50 hover:text-indigo-600",
-                            "group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold"
-                          )}
-                        >
-                          <span
-                            className={classNames(
-                              team.current
-                                ? "border-indigo-600 text-indigo-600"
-                                : "border-gray-200 text-gray-400 group-hover:border-indigo-600 group-hover:text-indigo-600",
-                              "flex size-6 shrink-0 items-center justify-center rounded-lg border bg-white text-[0.625rem] font-medium"
-                            )}
-                          >
-                            {team.initial}
-                          </span>
-                          <span className="truncate">{team.name}</span>
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </li>
+              
                 <li className="mt-auto">
                   <a
                     href="#"
@@ -295,7 +233,7 @@ const Sidebar: FC<SidebarProps> = ({ children }) => {
         </div>
 
         <div className="lg:pl-72">
-          <div className="sticky top-0 z-40 lg:mx-auto lg:max-w-7xl lg:px-8">
+          <div className="sticky top-0 z-40 lg:mx-auto lg:max-w-8xl lg:px-8 px-6">
             <div className="flex h-16 items-center gap-x-4 border-b border-gray-200 bg-white px-4 shadow-xs sm:gap-x-6 sm:px-6 lg:px-0 lg:shadow-none">
               <button
                 type="button"
@@ -331,7 +269,7 @@ const Sidebar: FC<SidebarProps> = ({ children }) => {
                   />
                 </form>
 
-                <Menu as="div" className="relative">
+                <Menu as="div" className="relative flex items-center">
                   <MenuButton className="flex items-center gap-x-2 rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-1">
                     <img
                       alt=""
