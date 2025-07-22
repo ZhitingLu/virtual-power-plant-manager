@@ -3,7 +3,7 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - main   # or your default branch
+      - main # or your default branch
 
 jobs:
   deploy:
@@ -19,12 +19,12 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Build project
+        run: pnpm -r run build
+
       # Run tests for all packages that have test scripts
       - name: Run tests
         run: pnpm -r run test
-
-      - name: Build project
-        run: pnpm -r run build
 
       - name: Deploy CDK stack
         run: pnpm --filter infra run deploy
