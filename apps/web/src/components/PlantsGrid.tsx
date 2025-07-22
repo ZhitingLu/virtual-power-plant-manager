@@ -22,11 +22,10 @@ export default function PlantsGrid({ plants }: PlantsGridProps) {
               <div className="flex items-center space-x-3">
                 <h3 className="truncate text-sm font-medium text-gray-900">{plant.name}</h3>
                 <span className="inline-flex shrink-0 items-center rounded-full bg-green-50 px-1.5 py-0.5 text-xs font-medium text-green-700 ring-1 ring-green-600/20 ring-inset">
-                  {plant.role}
+                  
                 </span>
               </div>
             </div>
-            <img alt="" src={plant.imageUrl} className="size-10 shrink-0 rounded-full bg-gray-300" />
           </div>
           <div>
             <div className="-mt-px flex divide-x divide-gray-200">
