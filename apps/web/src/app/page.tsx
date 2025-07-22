@@ -13,7 +13,7 @@ export default async function PlantsPage() {
   const plants = await fetchPlants();
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-green-50 to-green-100">
+    <main className="min-h-screen bg-white">
 
       <Sidebar>
         <PlantsGrid plants={plants} />
