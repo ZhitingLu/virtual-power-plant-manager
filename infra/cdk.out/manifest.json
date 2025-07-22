@@ -11,7 +11,7 @@
     },
     "VirtualPowerPlantStack": {
       "type": "aws:cloudformation:stack",
-      "environment": "aws://607856384745/us-east-1",
+      "environment": "aws://404782754294/eu-central-1",
       "properties": {
         "templateFile": "VirtualPowerPlantStack.template.json",
         "terminationProtection": false,
@@ -19,16 +19,16 @@
           "Project": "virtual-power-plant"
         },
         "validateOnSynth": false,
-        "assumeRoleArn": "arn:${AWS::Partition}:iam::607856384745:role/cdk-hnb659fds-deploy-role-607856384745-us-east-1",
-        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::607856384745:role/cdk-hnb659fds-cfn-exec-role-607856384745-us-east-1",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-607856384745-us-east-1/59d844fca18a5b2d17ffa7d437d4d6ddfabd7081d2c97fa905ea67d5f7e47769.json",
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::404782754294:role/cdk-hnb659fds-deploy-role-404782754294-eu-central-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::404782754294:role/cdk-hnb659fds-cfn-exec-role-404782754294-eu-central-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-404782754294-eu-central-1/e1cebb7303841b54fb34286352b0a2bd8440bb7ebe41f007e25069819c650545.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
           "VirtualPowerPlantStack.assets"
         ],
         "lookupRole": {
-          "arn": "arn:${AWS::Partition}:iam::607856384745:role/cdk-hnb659fds-lookup-role-607856384745-us-east-1",
+          "arn": "arn:${AWS::Partition}:iam::404782754294:role/cdk-hnb659fds-lookup-role-404782754294-eu-central-1",
           "requiresBootstrapStackVersion": 8,
           "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
         }
@@ -38,41 +38,6 @@
       ],
       "metadata": {
         "/VirtualPowerPlantStack": [
-          {
-            "type": "aws:cdk:error",
-            "data": "You are not authorized to perform this operation. User: arn:aws:iam::607856384745:user/myasb is not authorized to perform: ec2:DescribeAvailabilityZones because no identity-based policy allows the ec2:DescribeAvailabilityZones action",
-            "trace": [
-              "Annotations.addMessage (/home/zlu/Projects/virtual-power-plant-manager/node_modules/.pnpm/aws-cdk-lib@2.206.0_constructs@10.3.0/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1709)",
-              "Annotations.addError (/home/zlu/Projects/virtual-power-plant-manager/node_modules/.pnpm/aws-cdk-lib@2.206.0_constructs@10.3.0/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1171)",
-              "Function.getValue (/home/zlu/Projects/virtual-power-plant-manager/node_modules/.pnpm/aws-cdk-lib@2.206.0_constructs@10.3.0/node_modules/aws-cdk-lib/core/lib/context-provider.js:2:1771)",
-              "VppStack.get availabilityZones [as availabilityZones] (/home/zlu/Projects/virtual-power-plant-manager/node_modules/.pnpm/aws-cdk-lib@2.206.0_constructs@10.3.0/node_modules/aws-cdk-lib/core/lib/stack.js:1:11114)",
-              "new Vpc2 (/home/zlu/Projects/virtual-power-plant-manager/node_modules/.pnpm/aws-cdk-lib@2.206.0_constructs@10.3.0/node_modules/aws-cdk-lib/aws-ec2/lib/vpc.js:1:13827)",
-              "new Vpc2 (/home/zlu/Projects/virtual-power-plant-manager/node_modules/.pnpm/aws-cdk-lib@2.206.0_constructs@10.3.0/node_modules/aws-cdk-lib/core/lib/prop-injectable.js:1:488)",
-              "new VppStack (/home/zlu/Projects/virtual-power-plant-manager/infra/lib/vpp-stack.ts:21:21)",
-              "Object.<anonymous> (/home/zlu/Projects/virtual-power-plant-manager/infra/bin/infra.ts:15:1)",
-              "Module._compile (node:internal/modules/cjs/loader:1730:14)",
-              "Module.m._compile (/home/zlu/Projects/virtual-power-plant-manager/node_modules/.pnpm/ts-node@10.9.2_@swc+core@1.13.1_@types+node@20.19.9_typescript@5.4.5/node_modules/ts-node/src/index.ts:1618:23)",
-              "node:internal/modules/cjs/loader:1895:10",
-              "Object.require.extensions.<computed> [as .ts] (/home/zlu/Projects/virtual-power-plant-manager/node_modules/.pnpm/ts-node@10.9.2_@swc+core@1.13.1_@types+node@20.19.9_typescript@5.4.5/node_modules/ts-node/src/index.ts:1621:12)",
-              "Module.load (node:internal/modules/cjs/loader:1465:32)",
-              "Function._load (node:internal/modules/cjs/loader:1282:12)",
-              "TracingChannel.traceSync (node:diagnostics_channel:322:14)",
-              "wrapModuleLoad (node:internal/modules/cjs/loader:235:24)",
-              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)",
-              "phase4 (/home/zlu/Projects/virtual-power-plant-manager/node_modules/.pnpm/ts-node@10.9.2_@swc+core@1.13.1_@types+node@20.19.9_typescript@5.4.5/node_modules/ts-node/src/bin.ts:649:14)",
-              "bootstrap (/home/zlu/Projects/virtual-power-plant-manager/node_modules/.pnpm/ts-node@10.9.2_@swc+core@1.13.1_@types+node@20.19.9_typescript@5.4.5/node_modules/ts-node/src/bin.ts:95:10)",
-              "main (/home/zlu/Projects/virtual-power-plant-manager/node_modules/.pnpm/ts-node@10.9.2_@swc+core@1.13.1_@types+node@20.19.9_typescript@5.4.5/node_modules/ts-node/src/bin.ts:55:10)",
-              "Object.<anonymous> (/home/zlu/Projects/virtual-power-plant-manager/node_modules/.pnpm/ts-node@10.9.2_@swc+core@1.13.1_@types+node@20.19.9_typescript@5.4.5/node_modules/ts-node/src/bin.ts:800:3)",
-              "Module._compile (node:internal/modules/cjs/loader:1730:14)",
-              "Object.<anonymous> (node:internal/modules/cjs/loader:1895:10)",
-              "Module.load (node:internal/modules/cjs/loader:1465:32)",
-              "Function._load (node:internal/modules/cjs/loader:1282:12)",
-              "TracingChannel.traceSync (node:diagnostics_channel:322:14)",
-              "wrapModuleLoad (node:internal/modules/cjs/loader:235:24)",
-              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)",
-              "node:internal/main/run_main_module:36:49"
-            ]
-          },
           {
             "type": "aws:cdk:stack-tags",
             "data": [
@@ -382,34 +347,30 @@
             "type": "aws:cdk:warning",
             "data": "minHealthyPercent has not been configured so the default value of 50% is used. The number of running tasks will decrease below the desired count during deployments etc. See https://github.com/aws/aws-cdk/issues/31705 [ack: @aws-cdk/aws-ecs:minHealthyPercent]",
             "trace": [
-              "Annotations.addMessage (/home/zlu/Projects/virtual-power-plant-manager/node_modules/.pnpm/aws-cdk-lib@2.206.0_constructs@10.3.0/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1709)",
-              "Annotations.addWarningV2 (/home/zlu/Projects/virtual-power-plant-manager/node_modules/.pnpm/aws-cdk-lib@2.206.0_constructs@10.3.0/node_modules/aws-cdk-lib/core/lib/annotations.js:1:896)",
-              "new BaseService (/home/zlu/Projects/virtual-power-plant-manager/node_modules/.pnpm/aws-cdk-lib@2.206.0_constructs@10.3.0/node_modules/aws-cdk-lib/aws-ecs/lib/base/base-service.js:1:8201)",
-              "new FargateService2 (/home/zlu/Projects/virtual-power-plant-manager/node_modules/.pnpm/aws-cdk-lib@2.206.0_constructs@10.3.0/node_modules/aws-cdk-lib/aws-ecs/lib/fargate/fargate-service.js:1:3888)",
-              "new FargateService2 (/home/zlu/Projects/virtual-power-plant-manager/node_modules/.pnpm/aws-cdk-lib@2.206.0_constructs@10.3.0/node_modules/aws-cdk-lib/core/lib/prop-injectable.js:1:488)",
-              "new VppStack (/home/zlu/Projects/virtual-power-plant-manager/infra/lib/vpp-stack.ts:98:9)",
-              "Object.<anonymous> (/home/zlu/Projects/virtual-power-plant-manager/infra/bin/infra.ts:15:1)",
-              "Module._compile (node:internal/modules/cjs/loader:1730:14)",
-              "Module.m._compile (/home/zlu/Projects/virtual-power-plant-manager/node_modules/.pnpm/ts-node@10.9.2_@swc+core@1.13.1_@types+node@20.19.9_typescript@5.4.5/node_modules/ts-node/src/index.ts:1618:23)",
-              "node:internal/modules/cjs/loader:1895:10",
-              "Object.require.extensions.<computed> [as .ts] (/home/zlu/Projects/virtual-power-plant-manager/node_modules/.pnpm/ts-node@10.9.2_@swc+core@1.13.1_@types+node@20.19.9_typescript@5.4.5/node_modules/ts-node/src/index.ts:1621:12)",
-              "Module.load (node:internal/modules/cjs/loader:1465:32)",
-              "Function._load (node:internal/modules/cjs/loader:1282:12)",
-              "TracingChannel.traceSync (node:diagnostics_channel:322:14)",
-              "wrapModuleLoad (node:internal/modules/cjs/loader:235:24)",
-              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)",
-              "phase4 (/home/zlu/Projects/virtual-power-plant-manager/node_modules/.pnpm/ts-node@10.9.2_@swc+core@1.13.1_@types+node@20.19.9_typescript@5.4.5/node_modules/ts-node/src/bin.ts:649:14)",
-              "bootstrap (/home/zlu/Projects/virtual-power-plant-manager/node_modules/.pnpm/ts-node@10.9.2_@swc+core@1.13.1_@types+node@20.19.9_typescript@5.4.5/node_modules/ts-node/src/bin.ts:95:10)",
-              "main (/home/zlu/Projects/virtual-power-plant-manager/node_modules/.pnpm/ts-node@10.9.2_@swc+core@1.13.1_@types+node@20.19.9_typescript@5.4.5/node_modules/ts-node/src/bin.ts:55:10)",
-              "Object.<anonymous> (/home/zlu/Projects/virtual-power-plant-manager/node_modules/.pnpm/ts-node@10.9.2_@swc+core@1.13.1_@types+node@20.19.9_typescript@5.4.5/node_modules/ts-node/src/bin.ts:800:3)",
-              "Module._compile (node:internal/modules/cjs/loader:1730:14)",
-              "Object.<anonymous> (node:internal/modules/cjs/loader:1895:10)",
-              "Module.load (node:internal/modules/cjs/loader:1465:32)",
-              "Function._load (node:internal/modules/cjs/loader:1282:12)",
-              "TracingChannel.traceSync (node:diagnostics_channel:322:14)",
-              "wrapModuleLoad (node:internal/modules/cjs/loader:235:24)",
-              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)",
-              "node:internal/main/run_main_module:36:49"
+              "Annotations.addMessage (/home/zhiting/projects/virtual-power-plant-manager/node_modules/.pnpm/aws-cdk-lib@2.206.0_constructs@10.3.0/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1709)",
+              "Annotations.addWarningV2 (/home/zhiting/projects/virtual-power-plant-manager/node_modules/.pnpm/aws-cdk-lib@2.206.0_constructs@10.3.0/node_modules/aws-cdk-lib/core/lib/annotations.js:1:896)",
+              "new BaseService (/home/zhiting/projects/virtual-power-plant-manager/node_modules/.pnpm/aws-cdk-lib@2.206.0_constructs@10.3.0/node_modules/aws-cdk-lib/aws-ecs/lib/base/base-service.js:1:8201)",
+              "new FargateService2 (/home/zhiting/projects/virtual-power-plant-manager/node_modules/.pnpm/aws-cdk-lib@2.206.0_constructs@10.3.0/node_modules/aws-cdk-lib/aws-ecs/lib/fargate/fargate-service.js:1:3888)",
+              "new FargateService2 (/home/zhiting/projects/virtual-power-plant-manager/node_modules/.pnpm/aws-cdk-lib@2.206.0_constructs@10.3.0/node_modules/aws-cdk-lib/core/lib/prop-injectable.js:1:488)",
+              "new VppStack (/home/zhiting/projects/virtual-power-plant-manager/infra/lib/vpp-stack.ts:99:9)",
+              "Object.<anonymous> (/home/zhiting/projects/virtual-power-plant-manager/infra/bin/infra.ts:15:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1469:14)",
+              "Module.m._compile (/home/zhiting/projects/virtual-power-plant-manager/node_modules/.pnpm/ts-node@10.9.2_@swc+core@1.13.1_@types+node@20.19.9_typescript@5.4.5/node_modules/ts-node/src/index.ts:1618:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1548:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/zhiting/projects/virtual-power-plant-manager/node_modules/.pnpm/ts-node@10.9.2_@swc+core@1.13.1_@types+node@20.19.9_typescript@5.4.5/node_modules/ts-node/src/index.ts:1621:12)",
+              "Module.load (node:internal/modules/cjs/loader:1288:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:1104:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)",
+              "phase4 (/home/zhiting/projects/virtual-power-plant-manager/node_modules/.pnpm/ts-node@10.9.2_@swc+core@1.13.1_@types+node@20.19.9_typescript@5.4.5/node_modules/ts-node/src/bin.ts:649:14)",
+              "bootstrap (/home/zhiting/projects/virtual-power-plant-manager/node_modules/.pnpm/ts-node@10.9.2_@swc+core@1.13.1_@types+node@20.19.9_typescript@5.4.5/node_modules/ts-node/src/bin.ts:95:10)",
+              "main (/home/zhiting/projects/virtual-power-plant-manager/node_modules/.pnpm/ts-node@10.9.2_@swc+core@1.13.1_@types+node@20.19.9_typescript@5.4.5/node_modules/ts-node/src/bin.ts:55:10)",
+              "Object.<anonymous> (/home/zhiting/projects/virtual-power-plant-manager/node_modules/.pnpm/ts-node@10.9.2_@swc+core@1.13.1_@types+node@20.19.9_typescript@5.4.5/node_modules/ts-node/src/bin.ts:800:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1469:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1548:10)",
+              "Module.load (node:internal/modules/cjs/loader:1288:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:1104:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)",
+              "node:internal/main/run_main_module:28:49"
             ]
           }
         ],
@@ -873,21 +834,5 @@
       }
     }
   },
-  "missing": [
-    {
-      "key": "availability-zones:account=607856384745:region=us-east-1",
-      "provider": "availability-zones",
-      "props": {
-        "dummyValue": [
-          "dummy1a",
-          "dummy1b",
-          "dummy1c"
-        ],
-        "account": "607856384745",
-        "region": "us-east-1",
-        "lookupRoleArn": "arn:${AWS::Partition}:iam::607856384745:role/cdk-hnb659fds-lookup-role-607856384745-us-east-1"
-      }
-    }
-  ],
   "minimumCliVersion": "2.1020.2"
 }
