@@ -1,3 +1,5 @@
+(In progress)
+
 This is a MVP Virtual Power Plant Manager app with:
 
 ✅ MVP Scope
