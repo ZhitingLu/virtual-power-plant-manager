@@ -6,19 +6,56 @@ import { PowerPlant, PowerReading } from '@vpp/types';
 export class PowerPlantService {
   // In-memory storage for demo purposes (replace with DB in real app)
   private plants: PowerPlant[] = [
-    {
-      id: '1',
-      name: 'Solar Farm Alpha',
-      location: 'California',
-      capacity: 100, // MW
-    },
-    {
-      id: '2',
-      name: 'Wind Park Beta',
-      location: 'Texas',
-      capacity: 150, // MW
-    },
-  ];
+  {
+    id: '1',
+    name: 'Solar Park Andalucía',
+    location: 'Spain',
+    capacity: 120, // MW
+  },
+  {
+    id: '2',
+    name: 'Wind Farm Schleswig',
+    location: 'Germany',
+    capacity: 160,
+  },
+  {
+    id: '3',
+    name: 'Hydro Plant Sognefjord',
+    location: 'Norway',
+    capacity: 210,
+  },
+  {
+    id: '4',
+    name: 'Geothermal Station Tuscany',
+    location: 'Italy',
+    capacity: 90,
+  },
+  {
+    id: '5',
+    name: 'Biomass Facility Łódź',
+    location: 'Poland',
+    capacity: 70,
+  },
+  {
+    id: '6',
+    name: 'Offshore Wind Hornsea',
+    location: 'United Kingdom',
+    capacity: 300,
+  },
+  {
+    id: '7',
+    name: 'Rooftop Solar Amsterdam',
+    location: 'Netherlands',
+    capacity: 30,
+  },
+  {
+    id: '8',
+    name: 'Hybrid Plant Rhône-Alpes',
+    location: 'France',
+    capacity: 140,
+  }
+];
+
 
   private readings: PowerReading[] = [];
 
