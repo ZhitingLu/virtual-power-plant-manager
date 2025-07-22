@@ -12,6 +12,7 @@ import * as rds from 'aws-cdk-lib/aws-rds';
 import * as secretsmanager from 'aws-cdk-lib/aws-secretsmanager';
 import * as redshift from '@aws-cdk/aws-redshift-alpha';
 import { PythonFunction } from '@aws-cdk/aws-lambda-python-alpha';
+import * as path from 'path';
 
 export class VppStack extends cdk.Stack {
     constructor(scope: Construct, id: string, props?: cdk.StackProps) {
@@ -57,7 +58,7 @@ export class VppStack extends cdk.Stack {
 
         // 5. Lambda for data processing
         const processorLambda = new PythonFunction(this, 'DataProcessor', {
-            entry: '../../apps/lambda/data-processor',
+            entry: path.resolve(__dirname, '../../apps/lambda/data-processor'),
             runtime: lambda.Runtime.PYTHON_3_12,
             vpc,
             environment: {
