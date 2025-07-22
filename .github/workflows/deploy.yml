@@ -1,5 +1,4 @@
-name: Deploy to AWS CDK Stack
-description: Deploys the AWS CDK stack for the Virtual Power Plant Manager application.
+name: CI/CD Pipeline
 
 on:
   push:
@@ -19,6 +18,10 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install
+
+      # Run tests for all packages that have test scripts
+      - name: Run tests
+        run: pnpm -r run test
 
       - name: Build project
         run: pnpm -r run build
